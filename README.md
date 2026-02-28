@@ -12,7 +12,9 @@
 </p>
 
 <p align="center">
-  <video src="static/infra.mp4" width="800" autoplay loop muted playsinline></video>
+  <video width="800" autoplay loop muted playsinline>
+    <source src="./static/infra.mp4" type="video/mp4">
+  </video>
 </p>
 
 **Infra-Guard** is a production-grade autonomous agent designed to solve "alert fatigue" and fragmented logs in cloud-native environments. Powered by **LangGraph** and **Groq's LPU inference**, it performs near-instant root-cause analysis (RCA) on raw log streams.
