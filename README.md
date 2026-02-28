@@ -12,10 +12,13 @@
 </p>
 
 <p align="center">
-  <img src="static/infra.mp4" width="800">
+  https://github.com/user-attachments/assets/d1af10f5-54e2-4cb5-80e0-fe0414e06d4a
 </p>
 
-**Infra-Guard** is a production-grade autonomous agent designed to solve "alert fatigue" and fragmented logs in cloud-native environments. Powered by **LangGraph** and **Groq's LPU inference**, it performs near-instant root-cause analysis (RCA) on raw log streams.
+**Infr
+
+
+a-Guard** is a production-grade autonomous agent designed to solve "alert fatigue" and fragmented logs in cloud-native environments. Powered by **LangGraph** and **Groq's LPU inference**, it performs near-instant root-cause analysis (RCA) on raw log streams.
 
 ---
 
