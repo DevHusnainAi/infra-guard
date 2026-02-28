@@ -50,39 +50,44 @@ RCA_SYNTHESIS_PROMPT = """\
 You are an expert SRE performing a formal root cause analysis (RCA) for an active incident.
 
 <context>
-Anomaly score: {anomaly_score}/10
-Initial analysis: {anomaly_summary}
+- Anomaly score: {anomaly_score}/10
+- Initial analysis: {anomaly_summary}
 </context>
 
 <task>
-Using the log evidence below, identify the root cause, determine the blast radius,
+Using the log evidence below, identify the primary root cause, determine the blast radius,
 and produce actionable remediation steps ordered by urgency.
 </task>
 
 <output_format>
-Return a structured Markdown report using EXACTLY this template — no deviations:
+Return a structured Markdown report that is visually professional and highly readable. 
+Use EXACTLY this structure, including icons and dividers:
 
-## Root Cause Analysis Report
+# Root Cause Analysis Report
+
+---
 
 ### Impact Level
-[Critical | High | Medium] — <one-sentence description of scope>
+**[IMPACT_LEVEL]** — [IMPACT_DESCRIPTION]
 
-### Root Cause
-<2–3 sentences identifying the root cause with specific evidence from the logs.
-Reference log fields (service names, error messages, timestamps) directly.>
+### Root Cause Details
+**Primary Issue:** [DETAILED_ROOT_CAUSE]
+*Evidence: References to specific service names, error messages, and timestamps.*
 
 ### Affected Components
-- **<component>**: <description of how it is affected>
+- **[COMPONENT_NAME]**: [STATUS_AND_IMPACT]
 
 ### Remediation Steps
-1. **Immediate (0–15 min):** <specific action>
-2. **Short-term (15–60 min):** <specific action>
-3. **Long-term (post-incident):** <specific action>
+1. **Immediate (0–15 min):** [STEP_DESCRIPTION]
+2. **Short-term (15–60 min):** [STEP_DESCRIPTION]
+3. **Long-term (post-incident):** [STEP_DESCRIPTION]
 
-### Evidence
+### Log Evidence Snippet
+```json
+[RELEVANT_LOG_JSON_OR_SNIPPET]
 ```
-<paste the most relevant log snippets here>
-```
+
+---
 </output_format>
 
 <logs>

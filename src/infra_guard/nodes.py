@@ -200,7 +200,7 @@ def anomaly_detection_node(state: OverallState, config: RunnableConfig) -> dict:
             trace_prefix
             + f" → score={score}/10"
             + f" | patterns={patterns}"
-            + f" | {summary[:100]}{'...' if len(summary) > 100 else ''}"
+            + f" | {summary}"
         )
         logger.info(trace)
         return {
