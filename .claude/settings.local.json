@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.anthropic.com)",
+      "WebFetch(domain:langchain-ai.github.io)",
+      "WebFetch(domain:docs.langchain.com)",
+      "Bash(cd \"E:/BitBlazeTac Code/infra-guard\" && uv run pytest tests/ -v 2>&1)"
+    ]
+  }
+}
