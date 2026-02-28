@@ -19,6 +19,7 @@ Design decisions:
 
 from __future__ import annotations
 
+import logging
 import uuid
 from typing import Any
 
@@ -26,6 +27,8 @@ from fastapi import FastAPI, HTTPException, status
 from pydantic import BaseModel, Field, field_validator
 
 from .graph import graph
+
+logger = logging.getLogger(__name__)
 
 app = FastAPI(
     title="Infra-Guard",
